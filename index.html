@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basketball Quiz App</title>
+    <meta name="description" content="Test your knowledge of NBA and men's NCAA basketball">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine"/>
+    <link rel="stylesheet" href="./float-grid.css" />
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="questionslist.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header role='banner'>
+      <div class='question'>Question <span class='questionNumber'>0</span>/10</div>
+      <div class='score-track'>Score: <span class= 'score'>0</span><span> of 20pts</span></div>
+    </header>
+    <main role='main'>
+      <h1 class='starting-heading'>How much do you know about basketball?</h1> 
+      <div class='quiz-button'>
+        <p class='quiz-go'>Take the quiz to find out. Each correct answer is 2 points:</p>
+        <a href='question.html'><button class='start-button'>Let's Ball!</button></a>
+      </div>
+      <div class='question-container'>
+      </div>
+    </main>
+  </body>
+</html>

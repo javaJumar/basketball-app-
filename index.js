@@ -30,10 +30,11 @@ let score = 0;
 //this function links to questionslist.js to generate all the questions to the HTML
 function createQuestion(){
   if (questionNumber < DATA.length){
-    return (`<h1 class='ask-question'>${DATA[questionNumber].question}</h1>
+    return (`<h2 class='ask-question'>${DATA[questionNumber].question}</h2>
     <form role='form' class='question-form'>
     <section role='region'>
-    <div class='answer-list'>
+    <fieldset class='answer-list'>
+      <legend>Answers:</legend>
       <label class='answer-set'>
       <input type="radio" style="vertical-align: middle" name="answer-set-1" id="answer1-1" value="${DATA[questionNumber].answers[0]}" unchecked required><span class='span-answer' for="ans-1">${DATA[questionNumber].answers[0]}</span></label>
       <br>
@@ -46,7 +47,7 @@ function createQuestion(){
       <label class='answer-set'>
       <input type="radio" style="vertical-align: middle" name="answer-set-1" id="answer1-4" value="${DATA[questionNumber].answers[3]}" required><span class='span-answer' for="ans-4">${DATA[questionNumber].answers[3]}</span></label>
       <br>
-    </div>
+    </fieldset>
     <div class='submit-button'>
         <button type='submit' class='go-submit-answer'>Submit!</button>
     </div>
@@ -87,7 +88,7 @@ function correctAnswer(){
       <img class='feedback-image' src='${DATA[questionNumber].icon}' alt= '${DATA[questionNumber].alt}'>
      </div>
      <div class='answer-response'>
-       <h3 class='answer'>Correct, 2 points!</h3>
+       <h2 class='answer'>Correct, 2 points!</h2>
        <button id ='next-button'>Next Question</button>
      </div>
     </section>`);
@@ -102,7 +103,7 @@ function wrongAnswer(){
       <img class='feedback-image' src='https://www.demilked.com/magazine/wp-content/uploads/2016/06/month-in-new-york-infinite-gifs-james-curran-28.gif' alt = 'Unable to intercept a pass.'>
      </div>
      <div class='answer-response'>
-       <h3 class='answer'>Sorry, that's incorrect. The correct answer is ${DATA[questionNumber].rightAnswer}. You'll get it next time!</h3>
+       <h2 class='answer'>Sorry, that's incorrect. The correct answer is ${DATA[questionNumber].rightAnswer}. You'll get it next time!</h2>
        <button id ='next-button'>Next Question</button>
      </div>
     </section>`);
